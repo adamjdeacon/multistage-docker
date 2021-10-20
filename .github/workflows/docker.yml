@@ -12,7 +12,6 @@ jobs:
   setup-build-publish-deploy:
     name: Builds docker images then throws it away
     runs-on: ubuntu-latest
-    environment: production
 
     steps:
     - name: Checkout
