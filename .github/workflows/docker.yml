@@ -5,9 +5,12 @@ on:
     branches:
       - main
 
+env:
+  IMAGE: test-image
+
 jobs:
   setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
+    name: Builds docker images then throws it away
     runs-on: ubuntu-latest
     environment: production
 
@@ -19,7 +22,7 @@ jobs:
     - name: Build
       run: |-
         docker build \
-          --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
+          --tag "$IMAGE:$GITHUB_SHA" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
           .
