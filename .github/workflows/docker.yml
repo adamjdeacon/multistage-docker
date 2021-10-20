@@ -23,6 +23,4 @@ jobs:
       run: |-
         docker build \
           --tag "$IMAGE:$GITHUB_SHA" \
-          --build-arg GITHUB_SHA="$GITHUB_SHA" \
-          --build-arg GITHUB_REF="$GITHUB_REF" \
           .
