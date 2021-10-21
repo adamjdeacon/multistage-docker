@@ -17,3 +17,7 @@ The size of the container at each stage are as follow:
 | final       | 84M         |
 
 The final image is prety impressive condering terraform is ~77Mb
+
+## Who wants badget? You gotta have a badge
+
+[![Build Docker Image](https://github.com/adamjdeacon/multistage-docker/actions/workflows/docker.yml/badge.svg)](https://github.com/adamjdeacon/multistage-docker/actions/workflows/docker.yml)
